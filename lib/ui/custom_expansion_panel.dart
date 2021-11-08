@@ -4,15 +4,15 @@ import 'package:flutter_balcoder_expansionpanel/model/expansion_panel_model.dart
 class CustomExpansionPanelPage extends StatefulWidget {
   CustomExpansionPanelPage({
     Key? key,
-    required this.categoryList,
+    required this.expansionList,
   }) : super(key: key);
-  List<ExpansionPanelModel> categoryList;
+  List<ExpansionPanelModel> expansionList;
   @override
   _CustomExpansionPanelPage createState() => _CustomExpansionPanelPage();
 }
 
 class _CustomExpansionPanelPage extends State<CustomExpansionPanelPage> {
-  // List<ExpansionPanelModel> _categoryList = [];
+  // List<ExpansionPanelModel> _expansionList = [];
 
   final _commentController = TextEditingController();
 
@@ -50,18 +50,18 @@ class _CustomExpansionPanelPage extends State<CustomExpansionPanelPage> {
             child: new ExpansionPanelList(
               expansionCallback: (int index, bool isExpanded) {
                 setState(() {
-                  widget.categoryList[index].isExpanded =
-                      !widget.categoryList[index].isExpanded;
+                  widget.expansionList[index].isExpanded =
+                      !widget.expansionList[index].isExpanded;
                 });
               },
-              children: widget.categoryList.map((ExpansionPanelModel item) {
+              children: widget.expansionList.map((ExpansionPanelModel item) {
                 return new ExpansionPanel(
                     headerBuilder: (BuildContext context, bool isExpanded) {
                       return new ListTile(
                           // onLongPress: () => _onWillLongPressed(item),
                           onTap: () {
                             // setState(() {
-                            //   categoryList.forEach((element) {
+                            //   expansionList.forEach((element) {
                             //     element.isExpanded = false;
                             //   });
 

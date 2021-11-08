@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: CustomExpansionPanelPage(
-        categoryList: [
+        expansionList: [
           new ExpansionPanelModel(
             isExpanded: true,
             isChecked: true,
